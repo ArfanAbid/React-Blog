@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Login as authLogin } from "../store/authSlice";
+import { login as authLogin } from "../store/authSlice";
 import { Button, Input, Logo } from "./index";
 import { useDispatch } from "react-redux";
 import authServive from "../appwrite/auth";
@@ -15,7 +15,7 @@ function Login() {
   const login = async (data) => {
     setError("");
     try {
-      const session = await authServive.login(data.email, data.password);
+      const session = await authServive.login(data);
       if (session) {
         const userData = await authServive.getCurrentUser();
         if (userData) {

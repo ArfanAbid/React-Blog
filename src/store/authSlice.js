@@ -12,7 +12,7 @@ const authSlice = createSlice({
 
         login:(state,action)=>{
             state.status=true;
-            state.userDate=action.payload;
+            state.userDate=action.payload.userDate;
         },
 
         logout:(state)=>{

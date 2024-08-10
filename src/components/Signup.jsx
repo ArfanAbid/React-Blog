@@ -15,8 +15,7 @@ const signup = async (data) => {
     setError("");
     try {
     const session = await authServive.createAccount(
-        data.email,
-        data.password
+        data
     );
     if (session) {
         const userData = await authServive.getCurrentUser();
@@ -50,7 +49,7 @@ return (
             Sign In{" "}
         </Link>
         </p>
-        {error && <P className="text-red-600 mt-8 text-center">{error}</P>}
+        {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
         <form onSubmit={handleSubmit(signup)} className="mt-8">
         <div className="space-y-5">
             {/* Name */}

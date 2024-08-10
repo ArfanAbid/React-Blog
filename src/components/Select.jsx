@@ -11,7 +11,7 @@ function Select({
   return (
     <div className='w-full'>
         {label && <label
-            className=''
+            className='block text-sm font-medium text-gray-700'
             htmlFor={id}>
         </label>}
 
@@ -26,7 +26,7 @@ function Select({
                 key={option}
                 value={option}
                 >
-                    {option.label}
+                    {option}
                 </option>
             ))}
         </select>

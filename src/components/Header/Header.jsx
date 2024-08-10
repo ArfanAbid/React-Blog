@@ -25,7 +25,7 @@ const Header = () => {
     },
     {
       name: "All posts",
-      path: "/all-posts",
+      path: "/all-post",
       active: authStatus,
     },
     {
